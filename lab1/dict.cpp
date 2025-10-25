@@ -14,7 +14,7 @@ Dict& Dict::operator +=(const pair<string, string>& wordPair) {
 
 Dict& Dict::operator -=(const pair<string, string>& words) {
     if (!this->empty()) {
-        root = root->remove(words); // присваиваем возможно новый корень
+        root = root->remove(words); // ГЇГ°ГЁГ±ГўГ ГЁГўГ ГҐГ¬ ГўГ®Г§Г¬Г®Г¦Г­Г® Г­Г®ГўГ»Г© ГЄГ®Г°ГҐГ­Гј
     }
     return *this;
 }
@@ -29,16 +29,16 @@ TreeNode* Dict::getRoot() {
 }
 
 string Dict::operator[](const string& en) const {
-    if (!root) return "<отсутствует>";
+    if (!root) return "<Г®ГІГ±ГіГІГ±ГІГўГіГҐГІ>";
     TreeNode* found = root->find(en);
-    if (!found) return "<отсутствует>";
+    if (!found) return "<Г®ГІГ±ГіГІГ±ГІГўГіГҐГІ>";
     return found->getPair().second;
 }
 
 string& Dict::operator[](const string& en) {
     TreeNode* node = root ? root->find(en) : nullptr;
     if (!node) {
-        *this += {en, "<отсутствует>"};
+        *this += {en, "<Г®ГІГ±ГіГІГ±ГІГўГіГҐГІ>"};
         node = root->find(en);
     }
     return node->getRuAdress();
@@ -56,7 +56,7 @@ Dict::~Dict() {
     delete root;
 }
 
-// Оператор вывода для записи словаря в файл
+// ГЋГЇГҐГ°Г ГІГ®Г° ГўГ»ГўГ®Г¤Г  Г¤Г«Гї Г§Г ГЇГЁГ±ГЁ Г±Г«Г®ГўГ Г°Гї Гў ГґГ Г©Г«
 ostream& operator<<(std::ostream& os, const Dict& dict) {
     if (dict.root) {
         dict.outputDict(os, dict.root);
@@ -130,10 +130,10 @@ Dict& Dict::operator=(const Dict& other) {
     if (this == &other)
         return *this;
 
-    // Очистим текущее дерево
+    // ГЋГ·ГЁГ±ГІГЁГ¬ ГІГҐГЄГіГ№ГҐГҐ Г¤ГҐГ°ГҐГўГ®
     delete root;
 
-    // Глубокое копирование
+    // ГѓГ«ГіГЎГ®ГЄГ®ГҐ ГЄГ®ГЇГЁГ°Г®ГўГ Г­ГЁГҐ
     if (other.root)
         root = copyTree(other.root);
     else
