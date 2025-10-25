@@ -1,9 +1,9 @@
 #pragma once
 using namespace std;
 
-const string WORD_PROMT = "Введите слово: ";
-const string TRANSLATION_PROMT = "Введите перевод: ";
-const string FILENAME_PROMT = "Введите имя файла: ";
+const string WORD_PROMT = "Г‚ГўГҐГ¤ГЁГІГҐ Г±Г«Г®ГўГ®: ";
+const string TRANSLATION_PROMT = "Г‚ГўГҐГ¤ГЁГІГҐ ГЇГҐГ°ГҐГўГ®Г¤: ";
+const string FILENAME_PROMT = "Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ¬Гї ГґГ Г©Г«Г : ";
 const char SEPARATOR = ',';
 
 pair<string, string> split(string, char);
