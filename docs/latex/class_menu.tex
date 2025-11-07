@@ -1,0 +1,66 @@
+\doxysection{Menu Class Reference}
+\hypertarget{class_menu}{}\label{class_menu}\index{Menu@{Menu}}
+
+
+Class responsible for handling program menu input/output.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_menu_a7ceb2718cac4b01b62731e1bcf4283f1}\label{class_menu_a7ceb2718cac4b01b62731e1bcf4283f1} 
+void {\bfseries display\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Display the menu in the console. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_menu_ad96a4a5725ec3a4464c30fdbe7ac5185}{get\+Numeric\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Read a valid numeric input. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_menu_a0516118ebc8838661f440f2dc151c3bb}{get\+String\+Input}} (const string)
+\begin{DoxyCompactList}\small\item\em Read a string input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for handling program menu input/output. 
+
+\label{doc-func-members}
+\Hypertarget{class_menu_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_menu_ad96a4a5725ec3a4464c30fdbe7ac5185}\index{Menu@{Menu}!getNumericInput@{getNumericInput}}
+\index{getNumericInput@{getNumericInput}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{getNumericInput()}{getNumericInput()}}
+{\footnotesize\ttfamily \label{class_menu_ad96a4a5725ec3a4464c30fdbe7ac5185} 
+int Menu\+::get\+Numeric\+Input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Read a valid numeric input. 
+
+\begin{DoxyReturn}{Returns}
+A number from 0 to 6. 
+\end{DoxyReturn}
+\Hypertarget{class_menu_a0516118ebc8838661f440f2dc151c3bb}\index{Menu@{Menu}!getStringInput@{getStringInput}}
+\index{getStringInput@{getStringInput}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{getStringInput()}{getStringInput()}}
+{\footnotesize\ttfamily \label{class_menu_a0516118ebc8838661f440f2dc151c3bb} 
+string Menu\+::get\+String\+Input (\begin{DoxyParamCaption}\item[{const string}]{promt}{}\end{DoxyParamCaption})}
+
+
+
+Read a string input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em promt} & Text of the prompt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entered string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Menu.\+h\item 
+main.\+cpp\end{DoxyCompactItemize}

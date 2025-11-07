@@ -1,0 +1,285 @@
+\doxysection{Tree\+Node Class Reference}
+\hypertarget{class_tree_node}{}\label{class_tree_node}\index{TreeNode@{TreeNode}}
+
+
+A node of a binary search tree storing a pair "{}\+English word — translation"{}.  
+
+
+
+
+{\ttfamily \#include $<$treenode.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tree_node_aaf14ce55a0e35e60c336b39a3b8dacc3}{get\+Left}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the left child node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tree_node_a26299dd567d5d129b892a26fb85f92e9}{get\+Right}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the right child node. \end{DoxyCompactList}\item 
+const pair$<$ string, string $>$ \& \mbox{\hyperlink{class_tree_node_aca89a32f6500560f8f2ccbd089caf181}{get\+Words}} () const
+\begin{DoxyCompactList}\small\item\em Get the stored word pair (const version). \end{DoxyCompactList}\item 
+pair$<$ string, string $>$ \& \mbox{\hyperlink{class_tree_node_acaec68ca882baf69bfc4b7d90dac3328}{get\+Words}} ()
+\begin{DoxyCompactList}\small\item\em Get the stored word pair (non-\/const version). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_node_ac676bf5a05e8d4aad958a2c8aea252bd}{set\+Left}} (\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*}left)
+\begin{DoxyCompactList}\small\item\em Set the left child node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_node_aedb645f036906ce51b57afdc5c2b0ddf}{set\+Right}} (\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*}right)
+\begin{DoxyCompactList}\small\item\em Set the right child node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_node_a9f81db2f6a451ae034be41fd9f65aad2}{set\+Words}} (pair$<$ string, string $>$ words)
+\begin{DoxyCompactList}\small\item\em Set a new word pair. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tree_node_aec116faf3cc76b95534562b01c308cd9}{remove}} (pair$<$ string, string $>$ words)
+\begin{DoxyCompactList}\small\item\em Remove a node with the given word pair from the subtree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tree_node_aa8a5f2e5edc82c26e33b7c71a27510d1}{insert}} (pair$<$ string, string $>$ words)
+\begin{DoxyCompactList}\small\item\em Insert a new word pair into the subtree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tree_node_a925bc88d48d65ded03ff0e6439c59641}{find}} (string en)
+\begin{DoxyCompactList}\small\item\em Find a node by the English word. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_node_a8d2adf1964fcffb93304b1135de4f90f}{node\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Count the number of nodes in the subtree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_node_a3279fff244db84577ce4adcce03bf077}{Tree\+Node}} (pair$<$ string, string $>$ words)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tree_node_a04864a9d308140a0e67e76ebb9e8a0f0}{operator==}} (const \mbox{\hyperlink{class_tree_node}{Tree\+Node}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare two nodes for equality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tree_node_a4a5782f0a167410db031b43893b14bb1}{operator!=}} (const \mbox{\hyperlink{class_tree_node}{Tree\+Node}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare two nodes for inequality. \end{DoxyCompactList}\item 
+\Hypertarget{class_tree_node_a138449d182c342d032c78e7037afc151}\label{class_tree_node_a138449d182c342d032c78e7037afc151} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Tree\+Node} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Recursively deletes child nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A node of a binary search tree storing a pair "{}\+English word — translation"{}. 
+
+Each node contains the word, its translation, and pointers to the left and right children. Used to implement the dictionary as a binary search tree. 
+
+\label{doc-constructors}
+\Hypertarget{class_tree_node_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tree_node_a3279fff244db84577ce4adcce03bf077}\index{TreeNode@{TreeNode}!TreeNode@{TreeNode}}
+\index{TreeNode@{TreeNode}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{TreeNode()}{TreeNode()}}
+{\footnotesize\ttfamily \label{class_tree_node_a3279fff244db84577ce4adcce03bf077} 
+Tree\+Node\+::\+Tree\+Node (\begin{DoxyParamCaption}\item[{pair$<$ string, string $>$}]{words}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Pair \texorpdfstring{$<$}{<}English word, translation\texorpdfstring{$>$}{>}. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_tree_node_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tree_node_a925bc88d48d65ded03ff0e6439c59641}\index{TreeNode@{TreeNode}!find@{find}}
+\index{find@{find}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{class_tree_node_a925bc88d48d65ded03ff0e6439c59641} 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} Tree\+Node\+::find (\begin{DoxyParamCaption}\item[{string}]{en}{}\end{DoxyParamCaption})}
+
+
+
+Find a node by the English word. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em en} & English word. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the found node or nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_aaf14ce55a0e35e60c336b39a3b8dacc3}\index{TreeNode@{TreeNode}!getLeft@{getLeft}}
+\index{getLeft@{getLeft}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{getLeft()}{getLeft()}}
+{\footnotesize\ttfamily \label{class_tree_node_aaf14ce55a0e35e60c336b39a3b8dacc3} 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} Tree\+Node\+::get\+Left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get a pointer to the left child node. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the left child or nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_a26299dd567d5d129b892a26fb85f92e9}\index{TreeNode@{TreeNode}!getRight@{getRight}}
+\index{getRight@{getRight}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{getRight()}{getRight()}}
+{\footnotesize\ttfamily \label{class_tree_node_a26299dd567d5d129b892a26fb85f92e9} 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} Tree\+Node\+::get\+Right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get a pointer to the right child node. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the right child or nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_acaec68ca882baf69bfc4b7d90dac3328}\index{TreeNode@{TreeNode}!getWords@{getWords}}
+\index{getWords@{getWords}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{getWords()}{getWords()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_tree_node_acaec68ca882baf69bfc4b7d90dac3328} 
+pair$<$ string, string $>$ \& Tree\+Node\+::get\+Words (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the stored word pair (non-\/const version). 
+
+\begin{DoxyReturn}{Returns}
+Reference to the pair \texorpdfstring{$<$}{<}English word, translation\texorpdfstring{$>$}{>}. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_aca89a32f6500560f8f2ccbd089caf181}\index{TreeNode@{TreeNode}!getWords@{getWords}}
+\index{getWords@{getWords}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{getWords()}{getWords()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_tree_node_aca89a32f6500560f8f2ccbd089caf181} 
+const pair$<$ string, string $>$ \& Tree\+Node\+::get\+Words (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the stored word pair (const version). 
+
+\begin{DoxyReturn}{Returns}
+Reference to the pair \texorpdfstring{$<$}{<}English word, translation\texorpdfstring{$>$}{>}. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_aa8a5f2e5edc82c26e33b7c71a27510d1}\index{TreeNode@{TreeNode}!insert@{insert}}
+\index{insert@{insert}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_tree_node_aa8a5f2e5edc82c26e33b7c71a27510d1} 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} Tree\+Node\+::insert (\begin{DoxyParamCaption}\item[{pair$<$ string, string $>$}]{words}{}\end{DoxyParamCaption})}
+
+
+
+Insert a new word pair into the subtree. 
+
+Inserts a new element into the binary search tree. Returns the root of the current subtree.
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Pair \texorpdfstring{$<$}{<}English word, translation\texorpdfstring{$>$}{>}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the current node (subtree root). 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_a8d2adf1964fcffb93304b1135de4f90f}\index{TreeNode@{TreeNode}!nodeCount@{nodeCount}}
+\index{nodeCount@{nodeCount}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{nodeCount()}{nodeCount()}}
+{\footnotesize\ttfamily \label{class_tree_node_a8d2adf1964fcffb93304b1135de4f90f} 
+int Tree\+Node\+::node\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Count the number of nodes in the subtree. 
+
+\begin{DoxyReturn}{Returns}
+Total number of nodes including the current one. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_a4a5782f0a167410db031b43893b14bb1}\index{TreeNode@{TreeNode}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{class_tree_node_a4a5782f0a167410db031b43893b14bb1} 
+bool Tree\+Node\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tree_node}{Tree\+Node}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Compare two nodes for inequality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the pairs differ. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_a04864a9d308140a0e67e76ebb9e8a0f0}\index{TreeNode@{TreeNode}!operator==@{operator==}}
+\index{operator==@{operator==}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_tree_node_a04864a9d308140a0e67e76ebb9e8a0f0} 
+bool Tree\+Node\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tree_node}{Tree\+Node}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Compare two nodes for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both nodes store the same pair. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_aec116faf3cc76b95534562b01c308cd9}\index{TreeNode@{TreeNode}!remove@{remove}}
+\index{remove@{remove}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_tree_node_aec116faf3cc76b95534562b01c308cd9} 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} Tree\+Node\+::remove (\begin{DoxyParamCaption}\item[{pair$<$ string, string $>$}]{words}{}\end{DoxyParamCaption})}
+
+
+
+Remove a node with the given word pair from the subtree. 
+
+Removal is based on the key (the English word). Returns the new root of the subtree.
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Pair containing the key to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New root of the subtree after removal. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_node_ac676bf5a05e8d4aad958a2c8aea252bd}\index{TreeNode@{TreeNode}!setLeft@{setLeft}}
+\index{setLeft@{setLeft}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{setLeft()}{setLeft()}}
+{\footnotesize\ttfamily \label{class_tree_node_ac676bf5a05e8d4aad958a2c8aea252bd} 
+void Tree\+Node\+::set\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{left}{}\end{DoxyParamCaption})}
+
+
+
+Set the left child node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Pointer to the new left child. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tree_node_aedb645f036906ce51b57afdc5c2b0ddf}\index{TreeNode@{TreeNode}!setRight@{setRight}}
+\index{setRight@{setRight}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{setRight()}{setRight()}}
+{\footnotesize\ttfamily \label{class_tree_node_aedb645f036906ce51b57afdc5c2b0ddf} 
+void Tree\+Node\+::set\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{right}{}\end{DoxyParamCaption})}
+
+
+
+Set the right child node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & Pointer to the new right child. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tree_node_a9f81db2f6a451ae034be41fd9f65aad2}\index{TreeNode@{TreeNode}!setWords@{setWords}}
+\index{setWords@{setWords}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{setWords()}{setWords()}}
+{\footnotesize\ttfamily \label{class_tree_node_a9f81db2f6a451ae034be41fd9f65aad2} 
+void Tree\+Node\+::set\+Words (\begin{DoxyParamCaption}\item[{pair$<$ string, string $>$}]{words}{}\end{DoxyParamCaption})}
+
+
+
+Set a new word pair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Pair \texorpdfstring{$<$}{<}English word, translation\texorpdfstring{$>$}{>}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+treenode.\+h\item 
+treenode.\+cpp\end{DoxyCompactItemize}

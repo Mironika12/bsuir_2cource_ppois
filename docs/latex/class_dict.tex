@@ -1,0 +1,284 @@
+\doxysection{Dict Class Reference}
+\hypertarget{class_dict}{}\label{class_dict}\index{Dict@{Dict}}
+
+
+English–\+Russian dictionary implemented using a binary search tree.  
+
+
+
+
+{\ttfamily \#include $<$dict.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dict}{Dict}} \& \mbox{\hyperlink{class_dict_ad3f20b5b9f1b4b4998653287be126e22}{operator+=}} (const pair$<$ string, string $>$ \&word\+Pair)
+\begin{DoxyCompactList}\small\item\em Add a new word pair to the dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dict}{Dict}} \& \mbox{\hyperlink{class_dict_ae36e513672e3c78229abf0b3f6dcbe19}{operator-\/=}} (const pair$<$ string, string $>$ \&words)
+\begin{DoxyCompactList}\small\item\em Remove a word from the dictionary. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_dict_ac345a95c35352e70d76fa96b52f48482}{operator\mbox{[}$\,$\mbox{]}}} (const string \&en) const
+\begin{DoxyCompactList}\small\item\em Get the translation of a word (const version). \end{DoxyCompactList}\item 
+string \& \mbox{\hyperlink{class_dict_af201e86b002d67d587c297c33381394a}{operator\mbox{[}$\,$\mbox{]}}} (const string \&en)
+\begin{DoxyCompactList}\small\item\em Get or create a translation (non-\/const version). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dict_a72d79f6dea0e38e7ac893a16ac042475}{empty}} ()
+\begin{DoxyCompactList}\small\item\em Check whether the dictionary is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_dict_a79297f19bbf0aa6c714ac128501915bd}{get\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Get the root node of the tree. \end{DoxyCompactList}\item 
+\Hypertarget{class_dict_a3772a1b20db8a4dc86cf6b9603a7ed93}\label{class_dict_a3772a1b20db8a4dc86cf6b9603a7ed93} 
+{\bfseries Dict} ()
+\begin{DoxyCompactList}\small\item\em Construct an empty dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dict_adf415612d66e08cf8e6d9757416be1c8}{Dict}} (pair$<$ string, string $>$ words)
+\begin{DoxyCompactList}\small\item\em Construct a dictionary with one word. \end{DoxyCompactList}\item 
+\Hypertarget{class_dict_a46561fe694c0bba6e7ed3703c47bf43f}\label{class_dict_a46561fe694c0bba6e7ed3703c47bf43f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Dict} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Deletes the entire tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dict_a89caeba2fa114ba9601ea95f31208432}{Dict}} (const \mbox{\hyperlink{class_dict}{Dict}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dict}{Dict}} \& \mbox{\hyperlink{class_dict_a85d490f24d92c738f06e2e96c2c2fab7}{operator=}} (const \mbox{\hyperlink{class_dict}{Dict}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dict_ab23b66246c56b78e6d94773cda05c980}{output\+Dict}} (std\+::ostream \&os, \mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*}node) const
+\begin{DoxyCompactList}\small\item\em Recursively output the tree to a stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_dict_a4de04bbdc27b27cb79504f00b7fb94bd}{input\+Dict}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Recursively load the tree from a stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_dict_ae735ccf46556b29797412a7b67d0f4ff}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_dict}{Dict}} \&dict)
+\begin{DoxyCompactList}\small\item\em Serialize the dictionary into an output stream. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_dict_a0a9387e21c0a3188d22c905f422816d1}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_dict}{Dict}} \&dict)
+\begin{DoxyCompactList}\small\item\em Load the dictionary from an input stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+English–\+Russian dictionary implemented using a binary search tree. 
+
+Provides methods for adding, removing, and searching words, as well as tree manipulation via overloaded operators. 
+
+\label{doc-constructors}
+\Hypertarget{class_dict_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dict_adf415612d66e08cf8e6d9757416be1c8}\index{Dict@{Dict}!Dict@{Dict}}
+\index{Dict@{Dict}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{Dict()}{Dict()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_dict_adf415612d66e08cf8e6d9757416be1c8} 
+Dict\+::\+Dict (\begin{DoxyParamCaption}\item[{pair$<$ string, string $>$}]{words}{}\end{DoxyParamCaption})}
+
+
+
+Construct a dictionary with one word. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Pair \texorpdfstring{$<$}{<}English word, translation\texorpdfstring{$>$}{>}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_dict_a89caeba2fa114ba9601ea95f31208432}\index{Dict@{Dict}!Dict@{Dict}}
+\index{Dict@{Dict}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{Dict()}{Dict()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_dict_a89caeba2fa114ba9601ea95f31208432} 
+Dict\+::\+Dict (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dict}{Dict}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another dictionary. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_dict_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dict_a72d79f6dea0e38e7ac893a16ac042475}\index{Dict@{Dict}!empty@{empty}}
+\index{empty@{empty}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_dict_a72d79f6dea0e38e7ac893a16ac042475} 
+bool Dict\+::empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check whether the dictionary is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if the tree root is null. 
+\end{DoxyReturn}
+\Hypertarget{class_dict_a79297f19bbf0aa6c714ac128501915bd}\index{Dict@{Dict}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily \label{class_dict_a79297f19bbf0aa6c714ac128501915bd} 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} Dict\+::get\+Root (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the root node of the tree. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the root. 
+\end{DoxyReturn}
+\Hypertarget{class_dict_a4de04bbdc27b27cb79504f00b7fb94bd}\index{Dict@{Dict}!inputDict@{inputDict}}
+\index{inputDict@{inputDict}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{inputDict()}{inputDict()}}
+{\footnotesize\ttfamily \label{class_dict_a4de04bbdc27b27cb79504f00b7fb94bd} 
+\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*} Dict\+::input\+Dict (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is}{}\end{DoxyParamCaption})}
+
+
+
+Recursively load the tree from a stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Input stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Root of the loaded subtree. 
+\end{DoxyReturn}
+\Hypertarget{class_dict_ad3f20b5b9f1b4b4998653287be126e22}\index{Dict@{Dict}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{class_dict_ad3f20b5b9f1b4b4998653287be126e22} 
+\mbox{\hyperlink{class_dict}{Dict}} \& Dict\+::operator+= (\begin{DoxyParamCaption}\item[{const pair$<$ string, string $>$ \&}]{word\+Pair}{}\end{DoxyParamCaption})}
+
+
+
+Add a new word pair to the dictionary. 
+
+Inserts the element into the tree if the word does not already exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em word\+Pair} & Pair \texorpdfstring{$<$}{<}English word, translation\texorpdfstring{$>$}{>}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the current object. 
+\end{DoxyReturn}
+\Hypertarget{class_dict_ae36e513672e3c78229abf0b3f6dcbe19}\index{Dict@{Dict}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \label{class_dict_ae36e513672e3c78229abf0b3f6dcbe19} 
+\mbox{\hyperlink{class_dict}{Dict}} \& Dict\+::operator-\/= (\begin{DoxyParamCaption}\item[{const pair$<$ string, string $>$ \&}]{words}{}\end{DoxyParamCaption})}
+
+
+
+Remove a word from the dictionary. 
+
+Removal is based on the English word.
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & Pair containing the key to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the current object. 
+\end{DoxyReturn}
+\Hypertarget{class_dict_a85d490f24d92c738f06e2e96c2c2fab7}\index{Dict@{Dict}!operator=@{operator=}}
+\index{operator=@{operator=}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_dict_a85d490f24d92c738f06e2e96c2c2fab7} 
+\mbox{\hyperlink{class_dict}{Dict}} \& Dict\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_dict}{Dict}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another dictionary. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the current object. 
+\end{DoxyReturn}
+\Hypertarget{class_dict_af201e86b002d67d587c297c33381394a}\index{Dict@{Dict}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_dict_af201e86b002d67d587c297c33381394a} 
+string \& Dict\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const string \&}]{en}{}\end{DoxyParamCaption})}
+
+
+
+Get or create a translation (non-\/const version). 
+
+If the word is not found, it is inserted with the value "{}$<$missing$>$"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em en} & English word. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the translation string (modifiable). 
+\end{DoxyReturn}
+\Hypertarget{class_dict_ac345a95c35352e70d76fa96b52f48482}\index{Dict@{Dict}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_dict_ac345a95c35352e70d76fa96b52f48482} 
+string Dict\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const string \&}]{en}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the translation of a word (const version). 
+
+If the word is not found, returns "{}$<$missing$>$"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em en} & English word. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Translation string. 
+\end{DoxyReturn}
+\Hypertarget{class_dict_ab23b66246c56b78e6d94773cda05c980}\index{Dict@{Dict}!outputDict@{outputDict}}
+\index{outputDict@{outputDict}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{outputDict()}{outputDict()}}
+{\footnotesize\ttfamily \label{class_dict_ab23b66246c56b78e6d94773cda05c980} 
+void Dict\+::output\+Dict (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{\mbox{\hyperlink{class_tree_node}{Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption}) const}
+
+
+
+Recursively output the tree to a stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream. \\
+\hline
+{\em node} & Current node. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-related-members}
+\Hypertarget{class_dict_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_dict_ae735ccf46556b29797412a7b67d0f4ff}\index{Dict@{Dict}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_dict_ae735ccf46556b29797412a7b67d0f4ff} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{class_dict}{Dict}} \&}]{dict}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Serialize the dictionary into an output stream. 
+
+Outputs the tree in preorder using "{}\+NULL"{} for empty nodes. \Hypertarget{class_dict_a0a9387e21c0a3188d22c905f422816d1}\index{Dict@{Dict}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Dict@{Dict}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{class_dict_a0a9387e21c0a3188d22c905f422816d1} 
+std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is}{, }\item[{\mbox{\hyperlink{class_dict}{Dict}} \&}]{dict}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Load the dictionary from an input stream. 
+
+The format must match \doxylink{class_dict_ab23b66246c56b78e6d94773cda05c980}{output\+Dict()}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+dict.\+h\item 
+dict.\+cpp\end{DoxyCompactItemize}
