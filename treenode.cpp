@@ -2,22 +2,14 @@
 #include <string>
 using namespace std;
 
-TreeNode* TreeNode::insert(pair<string, string> wordPair) {
-    if (wordPair < this->words_) {
-        if (left_) {
-            left_ = left_->insert(wordPair);
-        }
-        else {
-            left_ = new TreeNode(wordPair);
-        }
+TreeNode* TreeNode::insert(pair<string, string> words) {
+    if (words.first < words_.first) {
+        if (left_) left_ = left_->insert(words);
+        else left_ = new TreeNode(words);
     }
     else {
-        if (right_) {
-            right_ = right_->insert(wordPair);
-        }
-        else {
-            right_ = new TreeNode(wordPair);
-        }
+        if (right_) right_ = right_->insert(words);
+        else right_ = new TreeNode(words);
     }
     return this;
 }
@@ -37,14 +29,25 @@ TreeNode* TreeNode::remove(pair<string, string> words) {
         return nullptr;
     }
 
-    if (!left_) return right_;
-    if (!right_) return left_;
+    if (!left_) {
+        TreeNode* r = right_;
+        right_ = nullptr;
+        delete this;
+        return r;
+    }
 
-    TreeNode* succ = right_;
-    while (succ->left_) succ = succ->left_;
+    if (!right_) {
+        TreeNode* l = left_;
+        left_ = nullptr;
+        delete this;
+        return l;
+    }
 
-    words_ = succ->words_; // копируем данные successor
-    right_ = right_->remove(succ->words_); // безопасно удаляем successor рекурсивно
+    TreeNode* minInTree = right_;
+    while (minInTree->left_) minInTree = minInTree->left_;
+
+    words_ = minInTree->words_;
+    right_ = right_->remove(minInTree->words_);
     return this;
 }
 
@@ -60,7 +63,7 @@ TreeNode* TreeNode::getLeft()  const {
 TreeNode* TreeNode::getRight()  const {
     return right_;
 }
-pair<string, string> TreeNode::getPair()  const {
+const pair<string, string>& TreeNode::getWords()  const {
     return words_;
 }
 void TreeNode::setLeft(TreeNode* left) {
@@ -69,73 +72,34 @@ void TreeNode::setLeft(TreeNode* left) {
 void TreeNode::setRight(TreeNode* right) {
     right_ = right;
 }
-void TreeNode::setPair(pair<string, string> words) {
+void TreeNode::setWords(pair<string, string> words) {
     words_ = words;
 }
 
 TreeNode* TreeNode::find(string en) {
     if (words_.first == en) return this;
-    if (en < words_.first) {
-        return left_ ? left_->find(en) : nullptr;
-    }
-    else {
-        return right_ ? right_->find(en) : nullptr;
-    }
+    if (en < words_.first) return left_ ? left_->find(en) : nullptr;
+    else return right_ ? right_->find(en) : nullptr;
 }
 
 string& TreeNode::getRuAdress() {
     return words_.second;
 }
 
-//TreeNode::TreeNode() {
-//    left_ = right_ = nullptr;
-//    words_ = { "", "" };
-//}
-
 TreeNode::TreeNode(pair<string, string> words) {
     left_ = right_ = nullptr;
     words_ = words;
 }
-
-//TreeNode::~TreeNode() {
-//    // безопасное рекурсивное удаление
-//    if (left_) {
-//        delete left_;
-//        //left_ = nullptr;
-//    }
-//    if (right_) {
-//        delete right_;
-//        //right_ = nullptr;
-//    }
-//}
 
 bool TreeNode::operator==(const TreeNode& other) const {
     return words_ == other.words_;
 }
 
 bool TreeNode::operator!=(const TreeNode& other) const {
-    return !(*this == other);
+    return words_ != other.words_;
 }
 
-// Конструктор копирования (глубокое копирование)
-//TreeNode::TreeNode(const TreeNode& other) {
-//    words_ = other.words_;
-//    left_ = right_ = nullptr;
-//    if (other.left_) left_ = new TreeNode(*other.left_);
-//    if (other.right_) right_ = new TreeNode(*other.right_);
-//}
-//
-//// Оператор присваивания (глубокое копирование)
-//TreeNode& TreeNode::operator=(const TreeNode& other) {
-//    if (this == &other) return *this;
-//
-//    // удалить текущие поддеревья
-//    delete left_;
-//    delete right_;
-//    left_ = right_ = nullptr;
-//
-//    words_ = other.words_;
-//    if (other.left_) left_ = new TreeNode(*other.left_);
-//    if (other.right_) right_ = new TreeNode(*other.right_);
-//    return *this;
-//}
+TreeNode::~TreeNode() {
+    if (left_) delete left_;
+    if (right_) delete right_;
+}

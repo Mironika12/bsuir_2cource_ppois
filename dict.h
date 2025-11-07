@@ -9,13 +9,12 @@ public:
 	Dict& operator -=(const pair<string, string>&);
 	string operator[](const string&) const;
 	string& operator[](const string&);
-	//void loadDictFromFile(string);
 	bool empty();
 	TreeNode* getRoot();
 	Dict();
 	Dict(pair<string, string>);
 	~Dict();
-	Dict(const Dict& other);              // конструктор копирования
+	Dict(const Dict& other);
 	Dict& operator=(const Dict& other);
 	friend std::ostream& operator<<(std::ostream& os, const Dict& dict);
 	friend std::istream& operator>>(std::istream& is, Dict& dict);
