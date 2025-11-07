@@ -1,16 +1,32 @@
 #pragma once
 using namespace std;
 
-const string WORD_PROMT = "Âגוהטעו סכמגמ: ";
-const string TRANSLATION_PROMT = "Âגוהטעו ןונוגמה: ";
-const string FILENAME_PROMT = "Âגוהטעו טלÿ פאיכא: ";
+const string WORD_PROMT = "Enter a word: ";
+const string TRANSLATION_PROMT = "Enter a translation: ";
+const string FILENAME_PROMT = "Enter file name: ";
 const char SEPARATOR = ',';
 
-pair<string, string> split(string, char);
-
+/**
+ * @class Menu
+ * @brief Class responsible for handling program menu input/output.
+ */
 class Menu {
 public:
-	void displayMenu();
-	int getNumericInput();
-	string getStringInput(const string);
+    /**
+     * @brief Display the menu in the console.
+     */
+    void displayMenu();
+
+    /**
+     * @brief Read a valid numeric input.
+     * @return A number from 0 to 6.
+     */
+    int getNumericInput();
+
+    /**
+     * @brief Read a string input.
+     * @param promt Text of the prompt.
+     * @return Entered string.
+     */
+    string getStringInput(const string);
 };

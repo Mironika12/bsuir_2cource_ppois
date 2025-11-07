@@ -66,6 +66,9 @@ TreeNode* TreeNode::getRight()  const {
 const pair<string, string>& TreeNode::getWords()  const {
     return words_;
 }
+pair<string, string>& TreeNode::getWords() {
+    return words_;
+}
 void TreeNode::setLeft(TreeNode* left) {
     left_ = left;
 }
@@ -80,10 +83,6 @@ TreeNode* TreeNode::find(string en) {
     if (words_.first == en) return this;
     if (en < words_.first) return left_ ? left_->find(en) : nullptr;
     else return right_ ? right_->find(en) : nullptr;
-}
-
-string& TreeNode::getRuAdress() {
-    return words_.second;
 }
 
 TreeNode::TreeNode(pair<string, string> words) {

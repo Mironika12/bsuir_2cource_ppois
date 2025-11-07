@@ -39,7 +39,7 @@ string& Dict::operator[](const string& en) {
         *this += {en, "<отсутствует>"};
         node = root->find(en);
     }
-    return node->getRuAdress();
+    return node->getWords().second;
 }
 
 Dict::Dict() {
