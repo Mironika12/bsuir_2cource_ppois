@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference &mdash; документация Turing Machine 8.11</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f05bd548"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Turing Machine documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Turing Machine
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#turing.Program"><code class="docutils literal notranslate"><span class="pre">Program</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Program.add_rule"><code class="docutils literal notranslate"><span class="pre">Program.add_rule()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Program.copy"><code class="docutils literal notranslate"><span class="pre">Program.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Program.find_rule"><code class="docutils literal notranslate"><span class="pre">Program.find_rule()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Program.from_stream"><code class="docutils literal notranslate"><span class="pre">Program.from_stream()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Program.list_rules"><code class="docutils literal notranslate"><span class="pre">Program.list_rules()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Program.remove_rule"><code class="docutils literal notranslate"><span class="pre">Program.remove_rule()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#turing.Tape"><code class="docutils literal notranslate"><span class="pre">Tape</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.as_str"><code class="docutils literal notranslate"><span class="pre">Tape.as_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.content"><code class="docutils literal notranslate"><span class="pre">Tape.content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.copy"><code class="docutils literal notranslate"><span class="pre">Tape.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.from_tokens"><code class="docutils literal notranslate"><span class="pre">Tape.from_tokens()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.move"><code class="docutils literal notranslate"><span class="pre">Tape.move()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.read"><code class="docutils literal notranslate"><span class="pre">Tape.read()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.set_head"><code class="docutils literal notranslate"><span class="pre">Tape.set_head()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.Tape.write"><code class="docutils literal notranslate"><span class="pre">Tape.write()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#turing.TransitionRule"><code class="docutils literal notranslate"><span class="pre">TransitionRule</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turing.TransitionRule.matches"><code class="docutils literal notranslate"><span class="pre">TransitionRule.matches()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#turing.TuringMachine"><code class="docutils literal notranslate"><span class="pre">TuringMachine</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turing.TuringMachine.copy"><code class="docutils literal notranslate"><span class="pre">TuringMachine.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.TuringMachine.is_accept"><code class="docutils literal notranslate"><span class="pre">TuringMachine.is_accept()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.TuringMachine.run"><code class="docutils literal notranslate"><span class="pre">TuringMachine.run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turing.TuringMachine.step"><code class="docutils literal notranslate"><span class="pre">TuringMachine.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Turing Machine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-turing">
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-turing" title="Ссылка на этот заголовок"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="turing.Program">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">turing.</span></span><span class="sig-name descname"><span class="pre">Program</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alphabet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'q0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">states</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Program" title="Ссылка на это определение"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a complete Turing machine program: alphabet, states, rules, and tape configuration.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Ссылка на этот заголовок"></a></h2>
+<dl class="simple">
+<dt>alphabet<span class="classifier">list[str], optional</span></dt><dd><p>Allowed tape symbols.</p>
+</dd>
+<dt>empty_cell<span class="classifier">str, default=“_“</span></dt><dd><p>Symbol representing empty tape cells.</p>
+</dd>
+<dt>start_state<span class="classifier">str, default=“q0“</span></dt><dd><p>State from which execution begins.</p>
+</dd>
+<dt>states<span class="classifier">list[str], optional</span></dt><dd><p>States considered accepting states.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Program.add_rule">
+<span class="sig-name descname"><span class="pre">add_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Program.add_rule" title="Ссылка на это определение"></a></dt>
+<dd><p>Adds a transition rule to the program.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h3>
+<p>rule : TransitionRule</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Program.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.Program.copy" title="Ссылка на это определение"></a></dt>
+<dd><p>Creates a deep copy of the program.</p>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Ссылка на этот заголовок"></a></h3>
+<p>Program</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Program.find_rule">
+<span class="sig-name descname"><span class="pre">find_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Program.find_rule" title="Ссылка на это определение"></a></dt>
+<dd><p>Finds a rule matching given state and symbol.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="#turing.TransitionRule" title="turing.TransitionRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransitionRule</span></code></a>]</span></p>
+</dd>
+</dl>
+<section id="id2">
+<h3>Parameters<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h3>
+<p>state : str
+symbol : str</p>
+</section>
+<section id="id3">
+<h3>Returns<a class="headerlink" href="#id3" title="Ссылка на этот заголовок"></a></h3>
+<p>TransitionRule or None</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Program.from_stream">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Program.from_stream" title="Ссылка на это определение"></a></dt>
+<dd><p>Parses a Turing machine program and tape configuration from a text stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<a class="reference internal" href="#turing.Program" title="turing.Program"><code class="xref py py-class docutils literal notranslate"><span class="pre">Program</span></code></a>, <a class="reference internal" href="#turing.Tape" title="turing.Tape"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tape</span></code></a>]</span></p>
+</dd>
+</dl>
+<section id="id4">
+<h3>Parameters<a class="headerlink" href="#id4" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>f<span class="classifier">TextIO</span></dt><dd><p>Input file-like object.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h3>Returns<a class="headerlink" href="#id5" title="Ссылка на этот заголовок"></a></h3>
+<p>tuple[Program, Tape]</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Program.list_rules">
+<span class="sig-name descname"><span class="pre">list_rules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.Program.list_rules" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns all rules as formatted strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span></p>
+</dd>
+</dl>
+<section id="id6">
+<h3>Returns<a class="headerlink" href="#id6" title="Ссылка на этот заголовок"></a></h3>
+<p>list[str]</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Program.remove_rule">
+<span class="sig-name descname"><span class="pre">remove_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Program.remove_rule" title="Ссылка на это определение"></a></dt>
+<dd><p>Removes a transition rule if it exists.</p>
+<section id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Ссылка на этот заголовок"></a></h3>
+<p>rule : TransitionRule</p>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="turing.Tape">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">turing.</span></span><span class="sig-name descname"><span class="pre">Tape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">head</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape" title="Ссылка на это определение"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents the tape of a Turing machine.</p>
+<p>The tape is conceptually infinite in both directions. This class dynamically
+expands the underlying list of cells when the head moves beyond current bounds.</p>
+<section id="id8">
+<h2>Parameters<a class="headerlink" href="#id8" title="Ссылка на этот заголовок"></a></h2>
+<dl class="simple">
+<dt>content<span class="classifier">list[str], optional</span></dt><dd><p>Initial tape content. If omitted, the tape starts with a single empty cell.</p>
+</dd>
+<dt>head<span class="classifier">int, default=0</span></dt><dd><p>Initial head position.</p>
+</dd>
+<dt>empty_cell<span class="classifier">str, default=“_“</span></dt><dd><p>Symbol used for empty / uninitialized cells.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.as_str">
+<span class="sig-name descname"><span class="pre">as_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.as_str" title="Ссылка на это определение"></a></dt>
+<dd><p>Produces a human-readable representation of the tape with head position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+<section id="id9">
+<h3>Returns<a class="headerlink" href="#id9" title="Ссылка на этот заголовок"></a></h3>
+<p>str</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.content">
+<span class="sig-name descname"><span class="pre">content</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.content" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns a shallow copy of the tape content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span></p>
+</dd>
+</dl>
+<section id="id10">
+<h3>Returns<a class="headerlink" href="#id10" title="Ссылка на этот заголовок"></a></h3>
+<p>list[str]</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.copy" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns a deep copy of the tape.</p>
+<section id="id11">
+<h3>Returns<a class="headerlink" href="#id11" title="Ссылка на этот заголовок"></a></h3>
+<p>Tape</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.from_tokens">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">head</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.from_tokens" title="Ссылка на это определение"></a></dt>
+<dd><p>Creates a Tape object from an existing sequence of tokens.</p>
+<section id="id12">
+<h3>Parameters<a class="headerlink" href="#id12" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>tokens<span class="classifier">list[str]</span></dt><dd><p>Initial tape content.</p>
+</dd>
+<dt>head<span class="classifier">int, default=0</span></dt><dd><p>Initial position of the tape head.</p>
+</dd>
+<dt>empty_cell<span class="classifier">str, default=“_“</span></dt><dd><p>Symbol representing an empty cell.</p>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h3>Returns<a class="headerlink" href="#id13" title="Ссылка на этот заголовок"></a></h3>
+<p>Tape</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.move" title="Ссылка на это определение"></a></dt>
+<dd><p>Moves the head left, right, or stays in place.</p>
+<section id="id14">
+<h3>Parameters<a class="headerlink" href="#id14" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>direction<span class="classifier">{„L“, „R“, „N“}</span></dt><dd><p>Direction to move: left, right, or no movement.</p>
+</dd>
+</dl>
+</section>
+<section id="raises">
+<h3>Raises<a class="headerlink" href="#raises" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>ValueError</dt><dd><p>If direction is invalid.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.read" title="Ссылка на это определение"></a></dt>
+<dd><p>Reads the symbol at the current head position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+</dl>
+<section id="id15">
+<h3>Returns<a class="headerlink" href="#id15" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>str</dt><dd><p>Symbol under the head.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.set_head">
+<span class="sig-name descname"><span class="pre">set_head</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.set_head" title="Ссылка на это определение"></a></dt>
+<dd><p>Sets the head to a specific position.</p>
+<section id="id16">
+<h3>Parameters<a class="headerlink" href="#id16" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>pos<span class="classifier">int</span></dt><dd><p>New head position.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.Tape.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.Tape.write" title="Ссылка на это определение"></a></dt>
+<dd><p>Writes a symbol at the current head position.</p>
+<section id="id17">
+<h3>Parameters<a class="headerlink" href="#id17" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>symbol<span class="classifier">str</span></dt><dd><p>Symbol to write.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="turing.TransitionRule">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">turing.</span></span><span class="sig-name descname"><span class="pre">TransitionRule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cur_symbol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_symbol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.TransitionRule" title="Ссылка на это определение"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a transition rule of a Turing machine.</p>
+<dl class="simple">
+<dt>A rule maps:</dt><dd><p>(current_state, current_symbol)</p>
+</dd>
+<dt>to</dt><dd><p>(new_state, write_symbol, move_direction)</p>
+</dd>
+</dl>
+<section id="id18">
+<h2>Parameters<a class="headerlink" href="#id18" title="Ссылка на этот заголовок"></a></h2>
+<p>cur_state : str
+cur_symbol : str
+new_state : str
+write_symbol : str
+move : {„L“, „R“, „N“}</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.TransitionRule.matches">
+<span class="sig-name descname"><span class="pre">matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.TransitionRule.matches" title="Ссылка на это определение"></a></dt>
+<dd><p>Checks whether this rule applies to given state and symbol.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+<section id="id19">
+<h3>Parameters<a class="headerlink" href="#id19" title="Ссылка на этот заголовок"></a></h3>
+<p>state : str
+symbol : str</p>
+</section>
+<section id="id20">
+<h3>Returns<a class="headerlink" href="#id20" title="Ссылка на этот заголовок"></a></h3>
+<p>bool</p>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="turing.TuringMachine">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">turing.</span></span><span class="sig-name descname"><span class="pre">TuringMachine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">program</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tape</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.TuringMachine" title="Ссылка на это определение"></a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a running Turing machine instance.</p>
+<section id="id21">
+<h2>Parameters<a class="headerlink" href="#id21" title="Ссылка на этот заголовок"></a></h2>
+<dl class="simple">
+<dt>program<span class="classifier">Program</span></dt><dd><p>The program defining transitions and states.</p>
+</dd>
+<dt>tape<span class="classifier">Tape</span></dt><dd><p>The machine’s tape.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.TuringMachine.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.TuringMachine.copy" title="Ссылка на это определение"></a></dt>
+<dd><p>Returns a deep copy of the machine, including program and tape.</p>
+<section id="id22">
+<h3>Returns<a class="headerlink" href="#id22" title="Ссылка на этот заголовок"></a></h3>
+<p>TuringMachine</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.TuringMachine.is_accept">
+<span class="sig-name descname"><span class="pre">is_accept</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.TuringMachine.is_accept" title="Ссылка на это определение"></a></dt>
+<dd><p>Checks whether the current state is accepting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+<section id="id23">
+<h3>Returns<a class="headerlink" href="#id23" title="Ссылка на этот заголовок"></a></h3>
+<p>bool</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.TuringMachine.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#turing.TuringMachine.run" title="Ссылка на это определение"></a></dt>
+<dd><p>Runs the machine until acceptance or halt.</p>
+<section id="id24">
+<h3>Parameters<a class="headerlink" href="#id24" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>max_steps<span class="classifier">int, optional</span></dt><dd><p>Maximum number of steps to execute. If None, runs indefinitely.</p>
+</dd>
+<dt>log<span class="classifier">bool, default=False</span></dt><dd><p>Whether to print step-by-step execution logs.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="turing.TuringMachine.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#turing.TuringMachine.step" title="Ссылка на это определение"></a></dt>
+<dd><p>Performs one transition step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Тип результата<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+<section id="id25">
+<h3>Returns<a class="headerlink" href="#id25" title="Ссылка на этот заголовок"></a></h3>
+<dl class="simple">
+<dt>bool</dt><dd><p>True if a transition was applied, False if no applicable rule exists.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="index.html" class="btn btn-neutral float-left" title="Turing Machine documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, Krautsova Veranika. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
