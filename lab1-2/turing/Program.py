@@ -1,7 +1,7 @@
 import copy
-from typing import Optional, TextIO
-from Tape import Tape
-from TransitionRule import TransitionRule
+from typing import Optional
+from .Tape import tape_from_tokens
+from .TransitionRule import TransitionRule
 
 class Program:
     """
@@ -74,65 +74,6 @@ class Program:
         """
         return [repr(r) for r in self.rules]
 
-    def from_stream(cls, f: TextIO) -> tuple['Program', Tape]:
-        """
-        Parses a Turing machine program and tape configuration from a text stream.
-
-        Parameters
-        ----------
-        f : TextIO
-            Input file-like object.
-
-        Returns
-        -------
-        tuple[Program, Tape]
-        """
-        prog = cls()
-        tape_tokens = []
-        head_pos = 0
-        in_rules = False
-        for raw in f:
-            line = raw.strip()
-            if not line or line.startswith('#'):
-                continue
-            if line.lower().startswith('alphabet:'):
-                val = line.split(':', 1)[1].strip()
-                prog.alphabet = [s.strip() for s in val.split(',') if s.strip()]
-                continue
-            if line.lower().startswith('empty_cell:'):
-                prog.empty_cell = line.split(':', 1)[1].strip()
-                continue
-            if line.lower().startswith('start:'):
-                prog.start_state = line.split(':', 1)[1].strip()
-                continue
-            if line.lower().startswith('accept:'):
-                val = line.split(':', 1)[1].strip()
-                prog.accept_states = set([s.strip() for s in val.split(',') if s.strip()])
-                continue
-            if line.lower().startswith('tape:'):
-                val = line.split(':', 1)[1].strip()
-                tape_tokens = [s for s in val.split() if s != '']
-                continue
-            if line.lower().startswith('head:'):
-                head_pos = int(line.split(':', 1)[1].strip())
-                continue
-            if line.lower().startswith('rules:') or line.lower().startswith('rule:'):
-                in_rules = True
-                continue
-            if in_rules:
-                parts = line.split('->')
-                if len(parts) != 2:
-                    continue
-                left = parts[0].strip().split()
-                right = parts[1].strip().split()
-                if len(left) != 2 or len(right) < 3:
-                    continue
-                cur_state, cur_symbol = left[0], left[1]
-                new_state, write_symbol, move = right[0], right[1], right[2]
-                prog.add_rule(TransitionRule(cur_state, cur_symbol, new_state, write_symbol, move))
-        tape = Tape.from_tokens(tape_tokens if tape_tokens else [prog.empty_cell], head=head_pos, empty_cell=prog.empty_cell)
-        return prog, tape
-
     def __repr__(self):
         return f"Program(start={self.start_state}, accept={self.accept_states}, rules={len(self.rules)})"
 
@@ -145,3 +86,83 @@ class Program:
         Program
         """
         return copy.deepcopy(self)
+
+def program_from_stream(f):
+    """
+    Parses a Turing machine program and tape configuration from a text stream.
+
+    Parameters
+    ----------
+    f : TextIO
+        Input file-like object.
+
+    Returns
+    -------
+    tuple[Program, Tape]
+    """
+    prog = Program()          # создаём вручную
+    tape_tokens = []
+    head_pos = 0
+    in_rules = False
+
+    for raw in f:
+        line = raw.strip()
+        if not line or line.startswith('#'):
+            continue
+
+        if line.lower().startswith('alphabet:'):
+            val = line.split(':', 1)[1].strip()
+            prog.alphabet = [s.strip() for s in val.split(',') if s.strip()]
+            continue
+
+        if line.lower().startswith('empty_cell:'):
+            prog.empty_cell = line.split(':', 1)[1].strip()
+            continue
+
+        if line.lower().startswith('start:'):
+            prog.start_state = line.split(':', 1)[1].strip()
+            continue
+
+        if line.lower().startswith('accept:'):
+            val = line.split(':', 1)[1].strip()
+            prog.accept_states = set([s.strip() for s in val.split(',') if s.strip()])
+            continue
+
+        if line.lower().startswith('tape:'):
+            val = line.split(':', 1)[1].strip()
+            tape_tokens = [s for s in val.split() if s != '']
+            continue
+
+        if line.lower().startswith('head:'):
+            head_pos = int(line.split(':', 1)[1].strip())
+            continue
+
+        if line.lower().startswith('rules:') or line.lower().startswith('rule:'):
+            in_rules = True
+            continue
+
+        if in_rules:
+            parts = line.split('->')
+            if len(parts) != 2:
+                continue
+
+            left = parts[0].strip().split()
+            right = parts[1].strip().split()
+
+            if len(left) != 2 or len(right) < 3:
+                continue
+
+            cur_state, cur_symbol = left
+            new_state, write_symbol, move = right[0], right[1], right[2]
+
+            prog.add_rule(TransitionRule(
+                cur_state, cur_symbol,
+                new_state, write_symbol, move
+            ))
+
+    if not tape_tokens:
+        tape_tokens = [prog.empty_cell]
+
+    tape = tape_from_tokens(tape_tokens, head=head_pos, empty_cell=prog.empty_cell)
+
+    return prog, tape

@@ -123,25 +123,6 @@ class Tape:
         caret_pos = sum(len(c) + 1 for c in self._cells[:self.head])
         return f"{cells}\n{' ' * caret_pos}^ (head at {self.head})"
 
-    def from_tokens(cls, tokens: list[str], head: int = 0, empty_cell: str = '_'):
-        """
-        Creates a Tape object from an existing sequence of tokens.
-
-        Parameters
-        ----------
-        tokens : list[str]
-            Initial tape content.
-        head : int, default=0
-            Initial position of the tape head.
-        empty_cell : str, default='_'
-            Symbol representing an empty cell.
-
-        Returns
-        -------
-        Tape
-        """
-        return cls(content=tokens, head=head, empty_cell=empty_cell)
-
     def __eq__(self, other):
         return isinstance(other, Tape) and self._cells == other._cells and self.head == other.head and self.empty_cell == other.empty_cell
 
@@ -157,3 +138,22 @@ class Tape:
         Tape
         """
         return copy.deepcopy(self)
+    
+def tape_from_tokens(tokens, head=0, empty_cell='_'):
+    """
+    Creates a Tape object from an existing sequence of tokens.
+
+    Parameters
+    ----------
+    tokens : list[str]
+        Initial tape content.
+    head : int, default=0
+        Initial head position.
+    empty_cell : str, default='_'
+        Symbol for empty cell.
+
+    Returns
+    -------
+    Tape
+    """
+    return Tape(content=tokens, head=head, empty_cell=empty_cell)

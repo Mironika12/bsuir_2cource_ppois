@@ -1,4 +1,7 @@
-from turing import Program, Tape, TransitionRule, TuringMachine
+from turing.Program import Program, program_from_stream
+from turing.Tape import Tape, tape_from_tokens
+from turing.TransitionRule import TransitionRule
+from turing.TuringMachine import TuringMachine
 import pytest, io
 
 def test_read_initial():
@@ -57,14 +60,13 @@ def test_content_returns_copy():
 def test_as_str_format():
     tape = Tape(["1", "0", "1"], head=1)
     s = tape.as_str()
-    # Проверяем, что в выводе есть строки и указатель
     assert "1 0 1" in s
     assert "^" in s
     assert "head at 1" in s
 
 
 def test_from_tokens():
-    t = Tape.from_tokens(["A", "B", "C"], head=2)
+    t = tape_from_tokens(["A","B", "C"], head=2)
     assert t.read() == "C"
     assert t.head == 2
 
@@ -170,7 +172,7 @@ def test_program_from_stream_parsing():
     """
 
     stream = io.StringIO(data)
-    prog, tape = Program.from_stream(stream)
+    prog, tape = program_from_stream(stream)
 
     # basic fields
     assert prog.alphabet == ["0", "1"]
@@ -198,7 +200,7 @@ def test_program_from_stream_no_tape_defaults_to_empty_cell():
     """
 
     stream = io.StringIO(data)
-    prog, tape = Program.from_stream(stream)
+    prog, tape = program_from_stream(stream)
 
     assert tape.content() == ["_"]
     assert tape.head == 0

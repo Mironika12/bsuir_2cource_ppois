@@ -1,6 +1,6 @@
 from typing import Optional
-from Program import Program
-from Tape import Tape
+from .Program import Program
+from .Tape import Tape
 
 # разделить
 
