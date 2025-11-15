@@ -1,5 +1,8 @@
 import argparse
-from turing import Program, TuringMachine
+from Program import Program
+from Tape import Tape
+from TransitionRule import TransitionRule
+from TuringMachine import TuringMachine
 
 def main():
     parser = argparse.ArgumentParser(description="Turing machine interpreter")

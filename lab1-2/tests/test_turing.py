@@ -1,4 +1,7 @@
-from turing import Tape, Program, TuringMachine, TransitionRule
+from Program import Program
+from Tape import Tape
+from TransitionRule import TransitionRule
+from TuringMachine import TuringMachine
 import pytest, io
 
 def test_read_initial():
