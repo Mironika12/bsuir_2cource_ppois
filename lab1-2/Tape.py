@@ -123,8 +123,6 @@ class Tape:
         caret_pos = sum(len(c) + 1 for c in self._cells[:self.head])
         return f"{cells}\n{' ' * caret_pos}^ (head at {self.head})"
 
-# remove
-    @classmethod
     def from_tokens(cls, tokens: list[str], head: int = 0, empty_cell: str = '_'):
         """
         Creates a Tape object from an existing sequence of tokens.

@@ -74,7 +74,6 @@ class Program:
         """
         return [repr(r) for r in self.rules]
 
-    @classmethod
     def from_stream(cls, f: TextIO) -> tuple['Program', Tape]:
         """
         Parses a Turing machine program and tape configuration from a text stream.
