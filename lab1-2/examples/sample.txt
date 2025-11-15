@@ -1,0 +1,15 @@
+# sample 7-step Turing Machine
+alphabet: 0,1,_
+empty_cell: _
+start: q0
+accept: q_7
+tape: 1 0 1 0 _ _
+head: 0
+rules:
+q0 1 -> q1 0 R
+q1 0 -> q2 1 N
+q2 1 -> q3 1 R
+q3 1 -> q4 0 L
+q4 1 -> q5 0 L
+q5 1 -> q6 0 L
+q6 1 -> q7 0 L
