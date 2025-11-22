@@ -11,6 +11,7 @@ from pizzeria.restaurant.Reservation import Reservation
 from pizzeria.restaurant.Table import Table
 from pizzeria.restaurant.TableMenuQRCode import TableMenuQRCode
 from pizzeria.restaurant.ToySet import ToySet
+from pizzeria.restaurant.ChildMenu import ChildMenu
 
 from exceptions.exceptions import OutOfStockException, InvalidOperationException
 
@@ -152,3 +153,8 @@ def test_toyset_out_of_stock():
     toy = ToySet("T2", "Doll", in_stock=0)
     with pytest.raises(OutOfStockException):
         toy.checkout()
+
+def test_child_menu():
+    m = ChildMenu(["juice"], "green")
+    m.ask_for_coloring_book()
+    assert m.with_coloring_book() == True
