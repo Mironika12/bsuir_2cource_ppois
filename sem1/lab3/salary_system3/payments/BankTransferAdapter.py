@@ -8,7 +8,14 @@ class BankTransferAdapter(PaymentGatewayAdapter):
         self.api_endpoint: str = api_endpoint
 
     def submit_payment(self, instruction: "PaymentInstruction") -> bool:
-        return instruction.validate()
+        if not instruction.validate():
+            return False
+
+        self._payment_status[instruction.instruction_id] = "pending"
+        return True
 
     def handle_callback(self, instruction_id: str, status: str) -> bool:
         return status in ["success", "failed"]
+    
+    def check_status(self, instruction_id: str) -> str:
+        return self._payment_status.get(instruction_id, "unknown")

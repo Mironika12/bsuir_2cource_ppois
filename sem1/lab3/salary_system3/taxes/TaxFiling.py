@@ -1,5 +1,6 @@
 from .TaxAuthority import TaxAuthority
 
+
 class TaxFiling:
     def __init__(
         self,
@@ -18,4 +19,13 @@ class TaxFiling:
 
     def submit(self) -> bool:
         self.status = "submitted"
+        return True
+
+    def validate_before_submit(self) -> bool:
+        if self.status not in ("prepared", "ready"):
+            return False
+        if not self.period or not isinstance(self.period, str):
+            return False
+        if not self.tax_authority or not hasattr(self.tax_authority, "validate_taxpayer"):
+            return False
         return True
