@@ -48,3 +48,16 @@ def test_full_lifecycle_to_submit():
     project.submit()
 
     assert project.state == ProjectState.SUBMITTED
+
+def test_choose_theme_twice():
+    project = setup_project()
+    project.choose_theme("Тема")
+
+    with pytest.raises(ValueError):
+        project.choose_theme("Другая")
+
+def test_set_deadline_in_created():
+    project = setup_project()
+
+    with pytest.raises(ValueError):
+        project.set_deadline(Deadline(date.today()))
