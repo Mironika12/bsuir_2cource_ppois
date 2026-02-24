@@ -1,5 +1,6 @@
 from __future__ import annotations
 from typing import Optional
+import re
 
 from domain.course_project import CourseProject
 
@@ -13,9 +14,6 @@ class Student:
     def __init__(self, name: str, student_id: str) -> None:
         if not isinstance(name, str):
             raise TypeError("Имя должно быть строкой.")
-
-        if not name.strip():
-            raise ValueError("Имя не может быть пустым.")
         
         if not isinstance(student_id, str):
             raise TypeError("Номер студенческого билета должен быть строкой.")

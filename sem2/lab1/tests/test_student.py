@@ -18,6 +18,6 @@ def test_create_project_twice():
         student.create_project()
 
 
-def test_empty_name():
+def test_empty_id():
     with pytest.raises(ValueError):
-        Student("", "12345678")
+        Student("Иванов", "")

@@ -1,5 +1,6 @@
 import json
 import os
+import re
 from datetime import datetime, date
 
 from domain.student import Student
@@ -8,7 +9,7 @@ from domain.deadline import Deadline
 from domain.project_state import ProjectState
 
 
-USERS_FILE = "users.json"
+USERS_FILE = "./users.json"
 
 
 # -------------------- ВСПОМОГАТЕЛЬНЫЕ --------------------
@@ -28,6 +29,8 @@ def save_users(users: dict) -> None:
     with open(USERS_FILE, "w", encoding="utf-8") as f:
         json.dump(users, f, ensure_ascii=False, indent=4)
 
+def validate_name(name: str):
+    return re.fullmatch(r"[А-Я]\. *[А-Я]\. *[А-Я][а-я]+", name)
 
 def validate_student_id(student_id: str) -> bool:
     return student_id.isdigit() and len(student_id) == 8
@@ -132,7 +135,16 @@ def authenticate():
     if student_id not in users:
         print("Студент не найден. Создание нового пользователя.")
         name = input("Введите ваше имя: ")
+
+        if not validate_name(name):
+            print("Имя должно быть в формате: И. И. Иванов")
+            return None
+        
         supervisor_name = input("Введите имя руководителя (И. И. Фамилия): ")
+
+        if not validate_name(name):
+            print("Имя должно быть в формате: И. И. Иванов")
+            return None
 
         pin = input("Создайте 4-значный PIN-код: ")
         if not validate_pin(pin):
