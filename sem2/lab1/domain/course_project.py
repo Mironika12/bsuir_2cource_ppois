@@ -21,7 +21,7 @@ class CourseProject:
     def __init__(self) -> None:
         self.__theme: Optional[str] = None
         self.__student: Optional[Student] = None
-        self.__supervisor: Optional[ProjectManager] = None
+        self.__project_manager: Optional[ProjectManager] = None
         self.__deadline: Optional[Deadline] = None
 
         self.__plan: WorkPlan = WorkPlan()
@@ -48,8 +48,8 @@ class CourseProject:
         return self.__student
 
     @property
-    def supervisor(self) -> Optional[ProjectManager]:
-        return self.__supervisor
+    def project_manager(self) -> Optional[ProjectManager]:
+        return self.__project_manager
 
     @property
     def deadline(self) -> Optional[Deadline]:
@@ -80,10 +80,10 @@ class CourseProject:
             raise ValueError("Студент уже назначен.")
         self.__student = student
 
-    def assign_supervisor(self, supervisor: ProjectManager) -> None:
-        if self.__supervisor is not None:
+    def assign_project_manager(self, project_manager: ProjectManager) -> None:
+        if self.__project_manager is not None:
             raise ValueError("Руководитель уже назначен.")
-        self.__supervisor = supervisor
+        self.__project_manager = project_manager
 
     # ---------------- Выбор темы ----------------
 
@@ -148,13 +148,13 @@ class CourseProject:
     # ---------------- Консультации ----------------
 
     def add_consultation(self, consultation_date: date) -> None:
-        if self.__supervisor is None or self.__student is None:
+        if self.__project_manager is None or self.__student is None:
             raise ValueError("Не назначены участники проекта.")
 
         consultation = Consultation(
             consultation_date,
             self,
-            self.__supervisor,
+            self.__project_manager,
             self.__student,
         )
 
