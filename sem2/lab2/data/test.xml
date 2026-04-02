@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<students>
+    <exams>
+      <exam subject="Математика" score="8"/>
+      <exam subject="Физика" score="7"/>
+    </exams>
+
+  <student fio="Петров П.П." group="421701">
+    <exams>
+      <exam subject="Математика" score="6"/>
+      <exam subject="Информатика" score="9"/>
+    </exams>
+  </student>
+
+  <student fio="Сидоров С.С." group="421702">
+    <exams>
+      <exam subject="Физика" score="5"/>
+      <exam subject="Информатика" score="7"/>
+    </exams>
+  </student>
+
+  <student fio="Кузнецов К.К." group="421702">
+    <exams>
+      <exam subject="Математика" score="10"/>
+      <exam subject="Физика" score="9"/>
+    </exams>
+  </student>
+
+  <student fio="Смирнов А.А." group="421703">
+    <exams>
+      <exam subject="Информатика" score="8"/>
+      <exam subject="Математика" score="7"/>
+    </exams>
+  </student>
+
+  <student fio="Попов В.В." group="421703">
+    <exams>
+      <exam subject="Физика" score="6"/>
+      <exam subject="Информатика" score="6"/>
+    </exams>
+  </student>
+
+  <student fio="Васильев Г.Г." group="421704">
+    <exams>
+      <exam subject="Математика" score="9"/>
+      <exam subject="Физика" score="8"/>
+    </exams>
+  </student>
+
+  <student fio="Новиков Д.Д." group="421704">
+    <exams>
+      <exam subject="Информатика" score="10"/>
+      <exam subject="Математика" score="9"/>
+    </exams>
+  </student>
+
+  <student fio="Фёдоров Е.Е." group="421705">
+    <exams>
+      <exam subject="Физика" score="4"/>
+      <exam subject="Математика" score="6"/>
+    </exams>
+  </student>
+
+  <student fio="Морозов Ж.Ж." group="421705">
+    <exams>
+      <exam subject="Информатика" score="7"/>
+      <exam subject="Физика" score="5"/>
+    </exams>
+  </student>
+
+  <!-- ещё 20 студентов -->
+
+  <student fio="Алексеев З.З." group="421706">
+    <exams>
+      <exam subject="Математика" score="8"/>
+      <exam subject="Физика" score="8"/>
+    </exams>
+  </student>
+
+  <student fio="Лебедев И.И." group="421706">
+    <exams>
+      <exam subject="Информатика" score="9"/>
+      <exam subject="Математика" score="7"/>
+    </exams>
+  </student>
+
+  <student fio="Семёнов К.К." group="421707">
+    <exams>
+      <exam subject="Физика" score="6"/>
+      <exam subject="Информатика" score="8"/>
+    </exams>
+  </student>
+
+  <student fio="Егоров Л.Л." group="421707">
+    <exams>
+      <exam subject="Математика" score="5"/>
+      <exam subject="Физика" score="6"/>
+    </exams>
+  </student>
+
+  <student fio="Павлов М.М." group="421708">
+    <exams>
+      <exam subject="Информатика" score="10"/>
+      <exam subject="Математика" score="9"/>
+    </exams>
+  </student>
+
+  <student fio="Козлов Н.Н." group="421708">
+    <exams>
+      <exam subject="Физика" score="7"/>
+      <exam subject="Информатика" score="7"/>
+    </exams>
+  </student>
+
+  <student fio="Степанов О.О." group="421709">
+    <exams>
+      <exam subject="Математика" score="6"/>
+      <exam subject="Физика" score="5"/>
+    </exams>
+  </student>
+
+  <student fio="Николаев П.П." group="421709">
+    <exams>
+      <exam subject="Информатика" score="8"/>
+      <exam subject="Математика" score="7"/>
+    </exams>
+  </student>
+
+  <student fio="Орлов Р.Р." group="421710">
+    <exams>
+      <exam subject="Физика" score="9"/>
+      <exam subject="Математика" score="8"/>
+    </exams>
+  </student>
+
+  <student fio="Макаров С.С." group="421710">
+    <exams>
+      <exam subject="Информатика" score="6"/>
+      <exam subject="Физика" score="6"/>
+    </exams>
+  </student>
+
+  <student fio="Захаров Т.Т." group="421711">
+    <exams>
+      <exam subject="Математика" score="7"/>
+      <exam subject="Физика" score="8"/>
+    </exams>
+  </student>
+
+  <student fio="Белов У.У." group="421711">
+    <exams>
+      <exam subject="Информатика" score="9"/>
+      <exam subject="Математика" score="9"/>
+    </exams>
+  </student>
+
+  <student fio="Гусев Ф.Ф." group="421712">
+    <exams>
+      <exam subject="Физика" score="5"/>
+      <exam subject="Информатика" score="6"/>
+    </exams>
+  </student>
+
+  <student fio="Киселёв Х.Х." group="421712">
+    <exams>
+      <exam subject="Математика" score="8"/>
+      <exam subject="Физика" score="7"/>
+    </exams>
+  </student>
+
+  <student fio="Максимов Ц.Ц." group="421713">
+    <exams>
+      <exam subject="Информатика" score="10"/>
+      <exam subject="Математика" score="10"/>
+    </exams>
+  </student>
+
+  <student fio="Дмитриев Ч.Ч." group="421713">
+    <exams>
+      <exam subject="Физика" score="6"/>
+      <exam subject="Информатика" score="7"/>
+    </exams>
+  </student>
+
+  <student fio="Богданов Ш.Ш." group="421714">
+    <exams>
+      <exam subject="Математика" score="9"/>
+      <exam subject="Физика" score="9"/>
+    </exams>
+  </student>
+
+  <student fio="Виноградов Щ.Щ." group="421714">
+    <exams>
+      <exam subject="Информатика" score="8"/>
+      <exam subject="Физика" score="7"/>
+    </exams>
+  </student>
+
+</students>

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<students>
+  <student fio="Кравцова В.К." group="421701">
+    <exams>
+      <exam subject="ППОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Жукович И.А." group="477602">
+    <exams>
+      <exam subject="ЭкП" score="10"/>
+    </exams>
+  </student>
+  <student fio="Вашкевич П.А." group="420602">
+    <exams>
+      <exam subject="МППиУ" score="10"/>
+      <exam subject="АПЭЦ" score="10"/>
+    </exams>
+  </student>
+  <student fio="Орел Е.Н." group="424401">
+    <exams>
+      <exam subject="ТВиА" score="10"/>
+      <exam subject="ДВ" score="10"/>
+    </exams>
+  </student>
+  <student fio="Шукало В.Г." group="414301">
+    <exams>
+      <exam subject="БАУИ" score="10"/>
+    </exams>
+  </student>
+</students>
