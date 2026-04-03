@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<students>
+  <student fio="Андриевич Виктория Сергеевна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Аникеенко Андрей Дмитриевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Анкуда Богдан Викторович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Ануфриев Юрий Сергеевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Балабенко Анастасия Сергеевна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Баленкова Богдана Игоревна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Бибко Владислав Викторович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="8"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Васкан Анна Дмитриевна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Воинов Владислав Сергеевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="6"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Ганецкая Ксения Яновна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Григорчик Алина Дмитриевна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Жданюк Егор Дмитриевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Жилин Иван Николаевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Заборовский Иван Викторович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Запрудский Денис Александрович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Кравцова Вероника Кирилловна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Крамич Анна Андреевна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Миронов Тимур Эрнестович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Мухомедзянов Егор Сергеевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Неводниченко Матвей Валерьевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="7"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Рябая Юлия Сергеевна" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Савошинский Станислав Викторович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Савченко Алексей Дмитриевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Саевич Илья Андреевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Санюк Марк Игоревич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="8"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Синюкович Иван Дмитриевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Соловьёв Никита Леонидович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Сухоруков Михаил Артурович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="7"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Туровец Павел Дмитриевич" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Федосов Егор Константинович" group="421701">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Адамович Ксения Витальевна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Балюк Максим Витальевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Басак Юлия Павловна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Башура Артём Олегович" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="7"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Бурбас Дмитрий Юрьевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Вашкевич Максим Викторович" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Вегера Мария Павловна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Говор Георгий Геннадьевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Дождиков Александр Игоревич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Евик Алексей Николаевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Захаренков Иван Дмитриевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Криващёкая Анастасия Дмитриевна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Кулик Евгений Дмитриевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="7"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Лойко Станислав Павлович" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="6"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Мельничек Иван Александрович" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Морозов Артём" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Мяло Всеволод Вячеславович" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="6"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Нагорнова Маргарита Дмитриевна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Перерва Павло Дмитриевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Пешко Дарья Владимировна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Поплавский Кирилл Дмитриевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Пушистова Екатерина Сергеевна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Сайковский Антон Валерьевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Сечейко Николай Владимирович" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="8"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Сушко Владислав Романович" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Фролов Михаил Андреевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Хасанбаев Шахзад" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Шумилов Артём Андреевич" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="7"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Щурко Анастасия Алексеевна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Ященко Александра Вадимовна" group="421702">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Белковская Маргарита Витальевна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Вашкевич Александр Сергеевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Волкович Артём Сергеевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="6"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Горбунова Мария Евгеньевна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Демидов Алексей Владимирович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="7"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Дорош Максим Дмитриевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Евтух Тимур Вячеславович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Зацепин Артём Иванович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="8"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Исаенко Елизавета Александровна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="8"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Ишеков Андрей Максимович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Кастюкевич Александра Дмитриевна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="8"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Кириенков Егор Александрович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Ковалевская Татьяна Андреевна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="4"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Кузьмич Дарья Сергеевна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="4"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Кулькин Илья Андреевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Куприян Никита Михайлович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="6"/>
+      <exam subject="АОИС" score="9"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Лис Анастасия Александровна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+  <student fio="Макавчик Иван Алексеевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="6"/>
+    </exams>
+  </student>
+  <student fio="Марудин Артём Анатольевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Мацукевич Захар Александрович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="7"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Митько Глеб Алексеевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="5"/>
+      <exam subject="ППОИС" score="7"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="8"/>
+    </exams>
+  </student>
+  <student fio="Полещук Ольга Владимировна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="8"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="6"/>
+      <exam subject="АОИС" score="6"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Рассохов Егор Павлович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="9"/>
+      <exam subject="Философия" score="9"/>
+      <exam subject="ППОИС" score="5"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="5"/>
+    </exams>
+  </student>
+  <student fio="Свирид Роман Денисович" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="7"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Свитков Дмитрий Николаевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="10"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Соловей Татьяна Викторовна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="6"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="10"/>
+    </exams>
+  </student>
+  <student fio="Тутин Никита Витальевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="4"/>
+      <exam subject="Философия" score="8"/>
+      <exam subject="ППОИС" score="4"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="4"/>
+    </exams>
+  </student>
+  <student fio="Цвирко Викентий Андреевич" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="10"/>
+      <exam subject="Философия" score="6"/>
+      <exam subject="ППОИС" score="10"/>
+      <exam subject="АОИС" score="5"/>
+      <exam subject="МОИС" score="7"/>
+    </exams>
+  </student>
+  <student fio="Шепелевич Ксения Витальевна" group="421703">
+    <exams>
+      <exam subject="СПЭ" score="5"/>
+      <exam subject="Философия" score="10"/>
+      <exam subject="ППОИС" score="9"/>
+      <exam subject="АОИС" score="8"/>
+      <exam subject="МОИС" score="9"/>
+    </exams>
+  </student>
+</students>

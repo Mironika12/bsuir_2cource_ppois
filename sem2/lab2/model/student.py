@@ -3,11 +3,11 @@ from __future__ import annotations
 from model.exam import Exam
 
 class Student:
-    def __init__(self, fio: str, group: str, exams: list[Exam] = []):
+    def __init__(self, fio: str, group: str, exams: list[Exam] | None = None):
         self.id: int | None = None
         self.fio = fio
         self.group = group
-        self.exams = exams
+        self.exams = exams or []
 
     def get_average_score(self) -> float:
         if not self.exams:

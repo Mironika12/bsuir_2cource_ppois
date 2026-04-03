@@ -91,3 +91,56 @@ class StudentRepository:
         cursor.execute("DELETE FROM students")
 
         self.db.conn.commit()
+
+    def get_by_fio(self, fio: str):
+        cursor = self.db.conn.cursor()
+
+        cursor.execute(
+            "SELECT * FROM students WHERE fio = ?",
+            (fio,)
+        )
+        row = cursor.fetchone()
+
+        if not row:
+            return None
+
+        student_id = row["id"]
+
+        cursor.execute(
+            "SELECT subject, score FROM exams WHERE student_id = ?",
+            (student_id,)
+        )
+        exams_rows = cursor.fetchall()
+
+        exams = [Exam(e["subject"], e["score"]) for e in exams_rows]
+
+        student = Student(row["fio"], row["group_name"], exams)
+        student.id = student_id
+
+        return student
+    
+    def update_student(self, student: Student):
+        cursor = self.db.conn.cursor()
+
+        assert student.id is not None
+
+        # обновляем группу
+        cursor.execute(
+            "UPDATE students SET group_name = ? WHERE id = ?",
+            (student.group, student.id)
+        )
+
+        # удаляем старые экзамены
+        cursor.execute(
+            "DELETE FROM exams WHERE student_id = ?",
+            (student.id,)
+        )
+
+        # добавляем новые
+        for exam in student.exams:
+            cursor.execute(
+                "INSERT INTO exams (student_id, subject, score) VALUES (?, ?, ?)",
+                (student.id, exam.subject, exam.score)
+            )
+
+        self.db.conn.commit()

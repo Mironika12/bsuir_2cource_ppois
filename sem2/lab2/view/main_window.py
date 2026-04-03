@@ -116,6 +116,8 @@ class MainWindow(QMainWindow):
 
         self.export_action.triggered.connect(self.controller.export_xml)
         self.import_action.triggered.connect(self.on_import_xml)
+        self.clear_action.triggered.connect(self.on_clear_db)
+        
 
     def load_data(self):
         self.students = self.controller.get_all_students()
@@ -204,6 +206,7 @@ class MainWindow(QMainWindow):
         self.delete_action = QAction("Удалить", self)
         self.export_action = QAction("Экспорт XML", self)
         self.import_action = QAction("Импорт XML", self)
+        self.clear_action = QAction("Очистить БД", self)
 
         # меню
         actions_menu.addAction(self.add_action)
@@ -212,6 +215,7 @@ class MainWindow(QMainWindow):
 
         file_menu.addAction(self.export_action)
         file_menu.addAction(self.import_action)
+        file_menu.addAction(self.clear_action)
 
         # ===== TOOLBAR =====
         toolbar: QToolBar | None = self.addToolBar("Основные действия")
@@ -223,6 +227,7 @@ class MainWindow(QMainWindow):
         toolbar.addSeparator()
         toolbar.addAction(self.export_action)
         toolbar.addAction(self.import_action)
+        toolbar.addAction(self.clear_action)
 
     # ===== handlers =====
 
@@ -244,14 +249,20 @@ class MainWindow(QMainWindow):
 
     def on_import_xml(self):
         reply = QMessageBox.question(
-            None,
+            self,
             "Импорт",
-            "Заменить текущие данные?",
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+            "Очистить базу перед импортом?",
+            QMessageBox.StandardButton.Yes |
+            QMessageBox.StandardButton.No |
+            QMessageBox.StandardButton.Cancel
         )
-
-        if reply == QMessageBox.StandardButton.No:
+        
+        if reply == QMessageBox.StandardButton.Cancel:
             return
+
+        if reply == QMessageBox.StandardButton.Yes:
+            self.controller.clear_database()
+
         self.controller.import_xml()
         self.load_data()
 
@@ -272,3 +283,15 @@ class MainWindow(QMainWindow):
             self.tree.addTopLevelItem(student_item)
 
         self.tree.expandAll()
+
+    def on_clear_db(self):
+        reply = QMessageBox.question(
+            self,
+            "Подтверждение",
+            "Вы уверены, что хотите удалить ВСЕ данные?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+        )
+
+        if reply == QMessageBox.StandardButton.Yes:
+            self.controller.clear_database()
+            self.load_data()

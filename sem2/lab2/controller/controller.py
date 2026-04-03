@@ -37,9 +37,25 @@ class MainController:
 
         students = XMLReader.import_from_xml(path)
 
-        self.repo.clear_all()
+        added = 0
+        updated = 0
 
         for s in students:
-            self.repo.add_student(s)
+            existing = self.repo.get_by_fio(s.fio)
 
-        QMessageBox.information(None, "XML", "Данные загружены")
+            if existing:
+                s.id = existing.id
+                self.repo.update_student(s)
+                updated += 1
+            else:
+                self.repo.add_student(s)
+                added += 1
+
+        QMessageBox.information(
+            None,
+            "XML",
+            f"Импорт завершён\nДобавлено: {added}\nОбновлено: {updated}"
+        )
+
+    def clear_database(self):
+        self.repo.clear_all()
