@@ -1,0 +1,16 @@
+TILE_SIZE = 30
+MAP_SIZE = 20
+WIDTH = TILE_SIZE * MAP_SIZE
+HEIGHT = TILE_SIZE * MAP_SIZE
+FPS = 30
+
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+
+ENTITY_SIZE = (25, 25)
+
+PLAYER_PICTURE_PATH = "./assets/images/player.png"
