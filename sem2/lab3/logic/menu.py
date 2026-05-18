@@ -155,3 +155,141 @@ class Menu:
                 320
             )
         )
+
+    def draw_score(self, screen, score: int):
+        score_font = pg.font.SysFont("Arial", 30)
+
+        score_text = score_font.render(
+            f"Score: {score}",
+            True,
+            cfg.WHITE
+        )
+
+        screen.blit(
+            score_text,
+            (10, 10)
+        )
+
+    def draw_new_record(
+        self,
+        screen,
+        score,
+        name
+    ):
+
+        screen.fill(cfg.BLACK)
+
+        title_font = pg.font.SysFont("Arial", 60)
+        text_font = pg.font.SysFont("Arial", 40)
+
+        title = title_font.render(
+            "NEW RECORD!",
+            True,
+            cfg.YELLOW
+        )
+
+        score_text = text_font.render(
+            f"Score: {score}",
+            True,
+            cfg.WHITE
+        )
+
+        name_text = text_font.render(
+            f"Name: {name}",
+            True,
+            cfg.GREEN
+        )
+
+        enter_text = text_font.render(
+            "Press ENTER to save",
+            True,
+            cfg.WHITE
+        )
+
+        screen.blit(
+            title,
+            (
+                cfg.WIDTH // 2 - title.get_width() // 2,
+                120
+            )
+        )
+
+        screen.blit(
+            score_text,
+            (
+                cfg.WIDTH // 2 - score_text.get_width() // 2,
+                240
+            )
+        )
+
+        screen.blit(
+            name_text,
+            (
+                cfg.WIDTH // 2 - name_text.get_width() // 2,
+                320
+            )
+        )
+
+        screen.blit(
+            enter_text,
+            (
+                cfg.WIDTH // 2 - enter_text.get_width() // 2,
+                420
+            )
+        )
+
+    def draw_records(self, screen, records):
+        screen.fill(cfg.BLACK)
+
+        title_font = pg.font.SysFont("Arial", 60)
+        text_font = pg.font.SysFont("Arial", 40)
+
+        title = title_font.render("BEST RECORDS", True, cfg.YELLOW)
+        screen.blit(
+            title,
+            (cfg.WIDTH // 2 - title.get_width() // 2, 80)
+        )
+
+        for i, record in enumerate(records):
+            name_text = text_font.render(
+                f"{i + 1}. {record['name']}",
+                True,
+                cfg.WHITE
+            )
+            score_text = text_font.render(
+                f"{record['score']}",
+                True,
+                cfg.WHITE
+            )
+
+            y = 180 + i * 50
+            screen.blit(name_text, (120, y))
+            screen.blit(score_text, (cfg.WIDTH - 180, y))
+
+    def draw_help(self, screen):
+        screen.fill(cfg.BLACK)
+
+        title_font = pg.font.SysFont("Arial", 60)
+        text_font = pg.font.SysFont("Arial", 32)
+
+        # Заголовок
+        title = title_font.render("HELP / RULES", True, cfg.YELLOW)
+        screen.blit(title, (cfg.WIDTH // 2 - title.get_width() // 2, 50))
+
+        # Список правил
+        rules = [
+            "Use arrow keys to move the player",
+            "Collect all dots to win",
+            "Avoid enemies and bullets",
+            "Collect bonuses for special effects:",
+            "  - Speed boost",
+            "  - Random teleport",
+            "  - Shield (if enabled)",
+            "Press ESC to return to menu"
+        ]
+
+        y = 150
+        for line in rules:
+            text = text_font.render(line, True, cfg.WHITE)
+            screen.blit(text, (50, y))
+            y += 40

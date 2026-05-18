@@ -35,11 +35,9 @@ class Player(pg.sprite.Sprite):
 
         self.base_speed = 2
         self.speed = self.base_speed
-
-        self.has_shield = False
-
         self.speed_effect_end = 0
-        self.shield_effect_end = 0
+
+        self.score = 0
 
     def update(self, walls):
         keys = pg.key.get_pressed()
@@ -64,13 +62,6 @@ class Player(pg.sprite.Sprite):
             and current_time > self.speed_effect_end
         ):
             self.speed = self.base_speed
-
-        # конец щита
-        if (
-            self.has_shield
-            and current_time > self.shield_effect_end
-        ):
-            self.has_shield = False
 
         self.move(self.current_dir.x * self.speed, self.current_dir.y * self.speed, walls)
         self.center_in_tunnel()
@@ -134,8 +125,7 @@ class Player(pg.sprite.Sprite):
     def apply_bonus(self, walls):
         effect = random.choice([
             "speed",
-            "teleport",
-            "shield"
+            "teleport"
         ])
 
         current_time = pg.time.get_ticks()
@@ -192,12 +182,3 @@ class Player(pg.sprite.Sprite):
                 )
 
             print("TELEPORT")
-
-        # ================= SHIELD =================
-
-        elif effect == "shield":
-
-            self.has_shield = True
-            self.shield_effect_end = current_time + 30000
-
-            print("SHIELD")
