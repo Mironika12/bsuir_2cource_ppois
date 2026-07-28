@@ -1,0 +1,111 @@
+/* Сброс */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Страница */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+  padding: 40px;
+}
+
+/* Контейнер */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgb(230, 230, 230);
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
+
+/* Поля */
+.field {
+  margin-bottom: 16px;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Фокус */
+input:focus,
+textarea:focus {
+  border-color: #4f46e5;
+}
+
+/* Ошибка */
+input.error,
+textarea.error {
+  border: 2px solid #dc2626;
+  background-color: #fff5f5;
+}
+
+/* Текст ошибки */
+.error-message {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 6px;
+  min-height: 16px;
+}
+
+/* Кнопки */
+button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+/* Карточка проекта */
+.project-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+/* Сообщения */
+.message {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Успех */
+.success {
+  background: #ecfdf5;
+  color: #166534;
+}
+
+/* Ошибка блоком */
+.danger {
+  background: #fef2f2;
+  color: #991b1b;
+}

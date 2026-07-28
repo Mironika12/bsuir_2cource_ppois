@@ -31,12 +31,7 @@ class Consultation:
         self.__project_manager = project_manager
         self.__student = student
 
-        # Автоматическая регистрация
         project_manager.register_consultation(self)
-
-    # =====================================================
-    # ---------------------- PROPERTIES -------------------
-    # =====================================================
 
     @property
     def consultation_date(self) -> date:

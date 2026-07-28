@@ -3,6 +3,7 @@ import re
 from typing import List
 
 from domain.consultation import Consultation
+import config as cfg
 
 
 class ProjectManager:
@@ -15,52 +16,41 @@ class ProjectManager:
         if not isinstance(name, str):
             raise TypeError("Имя должно быть строкой.")
 
-        if not re.fullmatch(r"[А-Я]\. *[А-Я]\. *[А-Я][а-я]+", name):
+        if not re.fullmatch(cfg.FIO_TEMPLATE, name):
             raise ValueError("Имя должно быть в формате: И. И. Иванов")
 
         self.__name: str = name
-        self.__projects: List[CourseProject] = []
+        self.__projects: List[CourseProject] = [] # type: ignore
         self.__consultations: List[Consultation] = []
 
-    # =====================================================
-    # ---------------------- PROPERTIES -------------------
-    # =====================================================
 
     @property
     def name(self) -> str:
         return self.__name
 
     @property
-    def projects(self) -> List[CourseProject]:
+    def projects(self) -> List[CourseProject]: # type: ignore
         return list(self.__projects)
 
     @property
     def consultations(self) -> List[Consultation]:
         return list(self.__consultations)
 
-    # =====================================================
-    # ---------------------- ПРОЕКТЫ ----------------------
-    # =====================================================
 
-    def assign_project(self, project: CourseProject) -> None:
-        # if not isinstance(project, CourseProject):
-        #     raise TypeError("Ожидается CourseProject.")
-
+    def assign_project(self, project: CourseProject) -> None: # type: ignore
         if project in self.__projects:
             raise ValueError("Проект уже закреплён за руководителем.")
 
         self.__projects.append(project)
-        project.assign_supervisor(self)
+        project.assign_project_manager(self)
 
-    def remove_project(self, project: CourseProject) -> None:
+
+    def remove_project(self, project: CourseProject) -> None: # type: ignore
         if project not in self.__projects:
             raise ValueError("Проект не найден у данного руководителя.")
 
         self.__projects.remove(project)
 
-    # =====================================================
-    # ------------------- КОНСУЛЬТАЦИИ --------------------
-    # =====================================================
 
     def register_consultation(self, consultation: Consultation) -> None:
         if not isinstance(consultation, Consultation):
@@ -70,6 +60,7 @@ class ProjectManager:
             raise ValueError("Консультация уже зарегистрирована.")
 
         self.__consultations.append(consultation)
+
 
     def remove_consultation(self, consultation: Consultation) -> None:
         if consultation not in self.__consultations:

@@ -20,7 +20,7 @@ class CourseProject:
 
     def __init__(self) -> None:
         self.__theme: Optional[str] = None
-        self.__student: Optional[Student] = None
+        self.__student: Optional[Student] = None # type: ignore
         self.__project_manager: Optional[ProjectManager] = None
         self.__deadline: Optional[Deadline] = None
 
@@ -31,10 +31,6 @@ class CourseProject:
 
         self.__state: ProjectState = ProjectState.CREATED
 
-    # =====================================================
-    # -------------------- PROPERTIES ---------------------
-    # =====================================================
-
     @property
     def state(self) -> ProjectState:
         return self.__state
@@ -44,7 +40,7 @@ class CourseProject:
         return self.__theme
 
     @property
-    def student(self) -> Optional[Student]:
+    def student(self) -> Optional[Student]: # type: ignore
         return self.__student
 
     @property
@@ -70,12 +66,9 @@ class CourseProject:
     @property
     def text_sections(self):
         return list(self.__text_sections)
+    
 
-    # =====================================================
-    # ---------------- ЖИЗНЕННЫЙ ЦИКЛ ---------------------
-    # =====================================================
-
-    def assign_student(self, student: Student) -> None:
+    def assign_student(self, student: Student) -> None: # type: ignore
         if self.__student is not None:
             raise ValueError("Студент уже назначен.")
         self.__student = student
@@ -85,7 +78,6 @@ class CourseProject:
             raise ValueError("Руководитель уже назначен.")
         self.__project_manager = project_manager
 
-    # ---------------- Выбор темы ----------------
 
     def choose_theme(self, theme: str) -> None:
         if self.__state != ProjectState.CREATED:
@@ -97,9 +89,8 @@ class CourseProject:
         self.__theme = theme
         self.__state = ProjectState.TOPIC_SELECTED
 
-    # ---------------- Планирование ----------------
 
-    def add_plan_item(self, item: Item) -> None:
+    def add_plan_item(self, item: Item | dict) -> None:
         if self.__state not in (
             ProjectState.TOPIC_SELECTED,
             ProjectState.PLANNING,
@@ -109,18 +100,18 @@ class CourseProject:
         self.__plan += item
         self.__state = ProjectState.PLANNING
 
-    def remove_plan_item(self, item: Item) -> None:
+    def remove_plan_item(self, item_num: int) -> None:
         if self.__state not in (
             ProjectState.TOPIC_SELECTED,
             ProjectState.PLANNING,
         ):
             raise ValueError("Нельзя редактировать план на этом этапе.")
-
+        
+        item = self.__plan.items[item_num]
         self.__plan -= item
 
-    # ---------------- Исследование ----------------
 
-    def add_reference(self, reference: Reference) -> None:
+    def add_reference(self, reference: Reference | dict) -> None:
         if self.__state not in (
             ProjectState.PLANNING,
             ProjectState.RESEARCH,
@@ -130,7 +121,6 @@ class CourseProject:
         self.__research.add_reference(reference)
         self.__state = ProjectState.RESEARCH
 
-    # ---------------- Написание текста ----------------
 
     def write_section(self, text: str) -> None:
         if self.__state not in (
@@ -144,8 +134,6 @@ class CourseProject:
 
         self.__text_sections.append(text)
         self.__state = ProjectState.WRITING
-
-    # ---------------- Консультации ----------------
 
     def add_consultation(self, consultation_date: date) -> None:
         if self.__project_manager is None or self.__student is None:
@@ -161,8 +149,6 @@ class CourseProject:
         self.__consultations.append(consultation)
         self.__state = ProjectState.CONSULTING
 
-    # ---------------- Дедлайн ----------------
-
     def set_deadline(self, deadline: Deadline) -> None:
         if not isinstance(deadline, Deadline):
             raise TypeError("Ожидается объект Deadline.")
@@ -174,8 +160,6 @@ class CourseProject:
             raise ValueError("Нельзя изменить дедлайн после сдачи проекта.")
 
         self.__deadline = deadline
-
-    # ---------------- Сдача ----------------
 
     def submit(self) -> None:
         if self.__state != ProjectState.WRITING:

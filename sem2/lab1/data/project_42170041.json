@@ -1,0 +1,23 @@
+{
+    "theme": "123",
+    "state": "RESEARCH",
+    "deadline": {
+        "deadline_date": "2026-05-20"
+    },
+    "plan": [
+        {
+            "num": 1,
+            "task": "123",
+            "deadline_date": "2026-03-02",
+            "notes": ""
+        }
+    ],
+    "references": [
+        {
+            "reference": "123",
+            "is_read": false
+        }
+    ],
+    "text_sections": [],
+    "consultations": []
+}

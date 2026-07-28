@@ -14,6 +14,7 @@ YELLOW = (255, 255, 0)
 ENTITY_SIZE = (25, 25)
 
 LEVEL1_MAP_PATH = "./config/level1.json"
+LEVEL2_MAP_PATH = "./config/level2.json"
 
 PLAYER_PICTURE_PATH = "./assets/images/player.png"
 ENEMY1_PICTURE_PATH = "./assets/images/enemy1.png"

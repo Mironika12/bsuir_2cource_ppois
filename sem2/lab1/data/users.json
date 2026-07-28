@@ -1,0 +1,14 @@
+{
+    "42170041": {
+        "pin": "1234",
+        "student_name": "В. К. Кравцова",
+        "project_manager_name": "Д. В. Шункевич",
+        "project_file": "./data/project_42170041.json"
+    },
+    "42170001": {
+        "pin": "1111",
+        "student_name": "К. В. Адамович",
+        "project_manager_name": "Н. В. Зотов",
+        "project_file": "./data/project_42170001.json"
+    }
+}

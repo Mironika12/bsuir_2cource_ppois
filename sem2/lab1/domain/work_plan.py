@@ -12,22 +12,22 @@ class WorkPlan:
     """
 
     def __init__(self):
-        self.__items: List[Item] = []
+        self.__items: List[Item | dict] = []
 
     # -------------------- PROPERTIES --------------------
 
     @property
-    def items(self) -> List[Item]:
+    def items(self) -> List[Item | dict]:
         # возвращаем копию, чтобы нельзя было изменить список напрямую
         return list(self.__items)
 
     # -------------------- PRIVATE VALIDATION --------------------
 
-    def __validate_item(self, item: Item) -> None:
+    def __validate_item(self, item: Item | dict) -> None:
         if not isinstance(item, dict):
             raise TypeError("Пункт плана должен быть словарём.")
 
-        required_keys = {"num", "task", "deadline", "notes"}
+        required_keys = {"num", "task", "deadline"}
 
         if not required_keys.issubset(item.keys()):
             raise ValueError("Некорректная структура пункта плана.")
@@ -44,14 +44,13 @@ class WorkPlan:
         if item["notes"] is not None and not isinstance(item["notes"], str):
             raise TypeError("Заметки должны быть строкой или None.")
 
-    # -------------------- PUBLIC API --------------------
 
-    def __iadd__(self, item: Item):
+    def __iadd__(self, item: Item | dict):
         self.__validate_item(item)
         self.__items.append(item)
         return self
 
-    def __isub__(self, item: Item):
+    def __isub__(self, item: Item | dict):
         try:
             self.__items.remove(item)
         except ValueError:
